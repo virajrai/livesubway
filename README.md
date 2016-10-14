@@ -13,6 +13,10 @@ https://github.com/google/protobuf/releases/tag/v3.1.0
 4. move protoc binary into $PATH  
 5. run it  
 
+#MTA Protobuf compilation
+1. Download: https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto
+2. Download: http://datamine.mta.info/sites/all/files/pdfs/nyct-subway.proto.txt
+3. run protoc compilation on nyct-subway.proto
 
 ### Weekly goals
 - 10/14/16: Set up rudimentary Flask app and environment, mess around with MTA API
