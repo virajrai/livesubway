@@ -17,6 +17,7 @@ https://github.com/google/protobuf/releases/tag/v3.1.0
 4. move protoc binary into $PATH  
 5. run `protoc --python_path=WORKING_DIRECTORY gtfs-realtime.proto`  
 6. run `protoc --python_path=WORKING_DIRECTORY nyct-subway.proto`
+7. create API_KEY.py add line 'key=APIKEY'
 7. run `python getFeedsTEMP.py` to test success
 
 
