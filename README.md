@@ -1,7 +1,15 @@
 # Live Subway
-API KEY: dd1fb668977d0592c7b26d9fd3b9ca2d  
-username: jz2814@columbia.edu  
-password: livesubway  
+
+API endpoint: http://datamine.mta.info/files/<key>/gtfs
+
+
+# ProtoBuf Download
+https://github.com/google/protobuf/releases/tag/v3.1.0  
+1. Download: protoc-3.1.0-OS.zip  
+2. Unpack  
+3. go into unzipped_file/bin  
+4. move protoc binary into $PATH  
+5. run it  
 
 Live Subway is a project to provide real-time visualization of the NYC subways, using the real-time MTA data feeds, written with [Flask](flask.pocoo.org).
 
