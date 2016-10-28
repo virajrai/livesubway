@@ -1,0 +1,10 @@
+<html>
+	<ul>
+	{% for elem in entities %}
+	{% if elem %}
+	<li><p>{{ elem.__str__() }}</p></li>
+	{% else %}
+	<li><p style="color:red;">Problem with element</p></li>	
+	{% endif %}
+	{% endfor %}
+</html>
