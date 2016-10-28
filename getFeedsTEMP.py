@@ -1,9 +1,7 @@
-
-import gtfs_realtime_pb2 as gtfs
 from API_KEY import key
-import nyct_subway_pb2 as nyct
+import gtfs_realtime_pb2 as gtfs
 import requests
-
+# import nyct_subway_pb2 as nyct
 
 # demonstrates how to use FeedMessages to get data from API
 
