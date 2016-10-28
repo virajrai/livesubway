@@ -1,4 +1,4 @@
-# ADI LEADERS - PLEASE LET US KNOW IF YOU ARE MAKING CHANGES TO THIS REPOSITORY - recent modifications have significantly disrupted workflow for the team. Thank you!
+ADI LEADERS - PLEASE LET US KNOW IF YOU ARE MAKING CHANGES TO THIS REPOSITORY - recent modifications have significantly disrupted workflow for the team. Thank you!
 
 # Live Subway
 
