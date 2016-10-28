@@ -19,7 +19,8 @@ https://github.com/google/protobuf/releases/tag/v3.1.0
 4. run `protoc --python_path=WORKING_DIRECTORY gtfs-realtime.proto`  
 5. run `protoc --python_path=WORKING_DIRECTORY nyct-subway.proto`  
 6. create API_KEY.py add line `key=APIKEY`  
-7. run `python app.py` and pointer browser to  `localhost:5000` to test success  
+7. create staticTransit directory in root directory and add the static (.txt) files there  
+8. run `python app.py` and pointer browser to  `localhost:5000` to test success  
 
 
 
