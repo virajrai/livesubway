@@ -1,8 +1,9 @@
-import urllib2
-import requests
+
 import gtfs_realtime_pb2 as gtfs
-import nyct_subway_pb2 as nyct
 from API_KEY import key
+import nyct_subway_pb2 as nyct
+import requests
+
 
 # demonstrates how to use FeedMessages to get data from API
 

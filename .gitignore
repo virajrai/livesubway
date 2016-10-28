@@ -1,5 +1,5 @@
 *.proto
 *_pb2.py
 *.pyc
-staticTransit/*
+statictransit/*
 API_KEY.py

@@ -1,5 +1,3 @@
-ADI LEADERS - PLEASE LET US KNOW IF YOU ARE MAKING CHANGES TO THIS REPOSITORY - recent modifications have significantly disrupted workflow for the team. Thank you!
-
 # Live Subway
 
 Live Subway is a project to provide real-time visualization of the NYC subways, using the real-time MTA data feeds, written with [Flask](flask.pocoo.org).
