@@ -10,19 +10,18 @@ API endpoint: http://datamine.mta.info/files/[key]/gtfs
 2. Download: http://datamine.mta.info/sites/all/files/pdfs/nyct-subway.proto.txt
 
 # Environment Setup
-https://github.com/google/protobuf/releases/tag/v3.1.0  
-1. Download: protoc-3.1.0-OS.zip   
+https://github.com/google/protobuf/releases/latest
+1. Download: protoc-[version]-[OS].zip   
 2. go into unzipped_file/bin  
 3. move protoc binary into $PATH  
 4. run `protoc --python_path=WORKING_DIRECTORY gtfs-realtime.proto`  
 5. run `protoc --python_path=WORKING_DIRECTORY nyct-subway.proto`  
 6. create API_KEY.py add line `key=APIKEY`  
-7. create staticTransit directory in root directory and add the static (.txt) files there  
+7. create static_transit directory in root directory and add the static (.txt) files there  
 8. run `python app.py` and pointer browser to  `localhost:5000` to test success  
 
 
 
 ### Weekly goals
 - 10/14/16: Set up rudimentary Flask app and environment, mess around with MTA API
-
 - 10/28/16: Sockets and UI stuff
