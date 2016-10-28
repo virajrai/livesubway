@@ -1,13 +1,16 @@
 from flask import Flask, render_template
+from flask_socketio import SocketIO
 import getFeedsTEMP
 
 app = Flask(__name__)
+socketio = SocketIO(app)
 
 
 @app.route('/')
 def index():
     entities = []
-    for entity in getFeedsTEMP.feed.entity:
+    feed = getFeedsTEMP.get_feed()
+    for entity in feed.entity:
         route_id = entity.trip_update.trip.route_id
         vehicle_id = entity.vehicle.trip.route_id
         if ((route_id != "" and route_id == "5") or
@@ -16,5 +19,6 @@ def index():
 
     return render_template("index.html", entities=entities)
 
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    socketio.run(app, debug=True)

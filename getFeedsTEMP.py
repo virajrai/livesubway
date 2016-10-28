@@ -5,13 +5,15 @@ import requests
 
 # demonstrates how to use FeedMessages to get data from API
 
-# raw_gtfs = urllib2.urlopen("http://datamine.mta.info/mta_esi.php?key=" +
-#                           key + "&feed_id=1")
+MTA_ENDPOINT = "http://datamine.mta.info/mta_esi.php?key={}&feed_id=1" \
+    .format(key)
 
-raw_gtfs = requests.get("http://datamine.mta.info/mta_esi.php?key=" +
-                        key + "&feed_id=1")
-feed = gtfs.FeedMessage()
-feed.ParseFromString(raw_gtfs.content)
+
+def get_feed():
+    raw_gtfs = requests.get(MTA_ENDPOINT)
+    feed = gtfs.FeedMessage()
+    feed.ParseFromString(raw_gtfs.content)
+    return feed
 
 # testing API usage
 # for entity in feed.entity:
