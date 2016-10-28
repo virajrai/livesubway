@@ -15,9 +15,9 @@ https://github.com/google/protobuf/releases/tag/v3.1.0
 2. go into unzipped_file/bin  
 3. move protoc binary into $PATH  
 4. run `protoc --python_path=WORKING_DIRECTORY gtfs-realtime.proto`  
-5. run `protoc --python_path=WORKING_DIRECTORY nyct-subway.proto`
-6. create API_KEY.py add line 'key=APIKEY'
-7. run `python app.py` and pointer browser to  `localhost:5000` to test success
+5. run `protoc --python_path=WORKING_DIRECTORY nyct-subway.proto`  
+6. create API_KEY.py add line 'key=APIKEY'  
+7. run `python app.py` and pointer browser to  `localhost:5000` to test success  
 
 
 
