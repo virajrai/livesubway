@@ -1,18 +1,18 @@
+from feed import FeedTimer
 from flask import Flask, json, jsonify, render_template
 from flask_socketio import SocketIO
-
-
-import getFeedsTEMP
-
+from gevent import monkey
+monkey.patch_all()
 
 app = Flask(__name__)
 socketio = SocketIO(app)
+feed_timer = FeedTimer()
 
 
 @app.route('/')
 def index():
     entities = []
-    feed = getFeedsTEMP.get_feed()
+    feed = feed_timer.get_feed()
     for entity in feed.entity:
         route_id = entity.trip_update.trip.route_id
         vehicle_id = entity.vehicle.trip.route_id
@@ -28,4 +28,11 @@ def map_json():
     return jsonify(json.load(open("test.json")))
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    try:
+        feed_timer.start()
+        socketio.run(app, debug=True)
+
+    finally:
+        print "Interrupt received, stopping feed timer..."
+        feed_timer.stop()
+        print "Feed timer stopped."

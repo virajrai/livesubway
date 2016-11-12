@@ -3,3 +3,7 @@
 *.pyc
 static_transit/*
 API_KEY.py
+.DS_Store
+.vagrant
+.idea
+.ipynb_checkpoints
