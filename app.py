@@ -1,6 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, json, jsonify
 from flask_socketio import SocketIO
+
+
 import getFeedsTEMP
+
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -19,6 +22,10 @@ def index():
 
     return render_template("index.html", entities=entities)
 
+
+@app.route('/map_json')
+def map_json():
+    return jsonify(json.load(open("test.json")))
 
 if __name__ == "__main__":
     socketio.run(app, debug=True)
