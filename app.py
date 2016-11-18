@@ -24,7 +24,27 @@ def index():
 
 @app.route('/map_json')
 def map_json():
-    return jsonify(json.load(open("test.json")))
+    # Documentation for shapes.json:
+    #   route_id : {
+    #       sequence: number of points,
+    #       color: route color
+    #       points: [[lon, lat],...,]}
+
+    json_input = json.load(open("shapes.json", "r"))
+
+    return jsonify(json_input)
+
+
+@app.route('/stops_json')
+def stops_json():
+    # Documentation for stops.json:
+    #   stopid : {
+    #       lat : num,
+    #       lon : num,
+    #       name : string
+    #   }
+    json_input = json.load(open("stops.json", "r"))
+    return jsonify(json_input)
 
 if __name__ == "__main__":
     feed_thread = feed.start_timer()

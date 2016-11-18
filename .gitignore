@@ -2,6 +2,8 @@
 *_pb2.py
 *.pyc
 static_transit/*
+shapes.json
+stops.json
 API_KEY.py
 .DS_Store
 .vagrant
