@@ -1,5 +1,6 @@
-import transitfeed
 import json
+import transitfeed
+
 
 
 with open("shapes.json", "w") as fin:

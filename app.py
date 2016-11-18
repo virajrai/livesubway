@@ -27,7 +27,6 @@ def index():
 def map_json():
     # Documentation for shapes.json:
     #   route_id : {
-    #       
     #       sequence: number of points,
     #       color: route color
     #       points: [[lon, lat],...,]}
