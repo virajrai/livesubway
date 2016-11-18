@@ -1,10 +1,10 @@
+from eventlet import monkey_patch
 from flask import Flask, json, jsonify, render_template
 from flask_socketio import SocketIO
 
+import feed
 
-import getFeedsTEMP
-
-
+monkey_patch()
 app = Flask(__name__)
 socketio = SocketIO(app)
 
@@ -12,8 +12,7 @@ socketio = SocketIO(app)
 @app.route('/')
 def index():
     entities = []
-    feed = getFeedsTEMP.get_feed()
-    for entity in feed.entity:
+    for entity in feed.current_feed.entity:
         route_id = entity.trip_update.trip.route_id
         vehicle_id = entity.vehicle.trip.route_id
         if ((route_id != "" and route_id == "5") or
@@ -28,4 +27,9 @@ def map_json():
     return jsonify(json.load(open("test.json")))
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True)
+    feed_thread = feed.start_timer()
+    try:
+        socketio.run(app, debug=True)
+
+    finally:
+        feed_thread.kill()
