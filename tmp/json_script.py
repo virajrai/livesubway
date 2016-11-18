@@ -2,7 +2,6 @@ import json
 import transitfeed
 
 
-
 with open("shapes.json", "w") as fin:
     with open("stops.json", "w") as fin2:
         loader = transitfeed.Loader("./static_transit")
