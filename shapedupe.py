@@ -4,8 +4,8 @@ points = []
 truelines = []
 for lines in shapes:
 	if i!=0:
-		xtemp = lines.split(',')[2]
-		ytemp = lines.split(',')[3]
+		xtemp = lines.split(',')[1]
+		ytemp = lines.split(',')[2]
 		if  xtemp+""+ytemp not in points:
 			points.append(xtemp+""+ytemp)
 			truelines.append(lines)
