@@ -6,11 +6,11 @@ for lines in shapes:
     if i != 0:
         xtemp = lines.split(',')[1]
         ytemp = lines.split(',')[2]
-        if  xtemp + "" + ytemp not in points:
+        if xtemp + "" + ytemp not in points:
             points.append(xtemp + "" + ytemp)
             truelines.append(lines)
     else:
-        truelines.append(lines) 
+        truelines.append(lines)
     i = i + 1
 newfile = open("static_transit/newshapes.txt", 'w+')
 for line in truelines:
