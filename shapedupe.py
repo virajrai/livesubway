@@ -1,17 +1,14 @@
 shapes = open("static_transit/shapes.txt")
 i = 0
-pointsx = []
-pointsy = []
+points = []
 truelines = []
 for lines in shapes:
 	if i!=0:
 		xtemp = lines.split(',')[2]
 		ytemp = lines.split(',')[3]
-		if  xtemp not in pointsx:
-			if ytemp not in pointsy:
-				pointsx.append(xtemp)
-				pointsy.append(ytemp)
-				truelines.append(lines)
+		if  xtemp+""+ytemp not in points:
+			points.append(xtemp+""+ytemp)
+			truelines.append(lines)
 	else:
 		truelines.append(lines)	
 
