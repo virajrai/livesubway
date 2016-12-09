@@ -18,7 +18,7 @@ def feed_timer():
     while True:
         global current_feed
         current_feed = spawn(get_feed).wait()
-        sleep(5)
+        sleep(30)
 
 
 def get_feed():

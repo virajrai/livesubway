@@ -4,6 +4,7 @@
 static_transit/*
 shapes.json
 stops.json
+shape_indices.json
 API_KEY.py
 .DS_Store
 .vagrant

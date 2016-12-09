@@ -5,21 +5,20 @@ Live Subway is a project to provide real-time visualization of the NYC subways, 
 API endpoint: http://datamine.mta.info/files/[key]/gtfs
 
 
-#MTA .proto Files
-1. Download: https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto
-2. Download: http://datamine.mta.info/sites/all/files/pdfs/nyct-subway.proto.txt
+# MTA .proto Files
+1. Download: [Google GTFS Realtime Proto](https://developers.google.com/transit/gtfs-realtime/gtfs-realtime.proto)
+2. Download: [MTA Subway Proto](http://datamine.mta.info/sites/all/files/pdfs/nyct-subway.proto.txt) (remove the `.txt` extension)
 
 # Environment Setup
-https://github.com/google/protobuf/releases/latest
-1. Download: protoc-[version]-[OS].zip   
-2. go into unzipped_file/bin  
-3. move protoc binary into $PATH  
-4. run `protoc --python_path=WORKING_DIRECTORY gtfs-realtime.proto`  
-5. run `protoc --python_path=WORKING_DIRECTORY nyct-subway.proto`  
-6. create API_KEY.py add line `key=APIKEY`  
-7. create static_transit directory in root directory and add the static (.txt) files there 
-8. run `python tmp/json_script.py`  
-9. run `python app.py` and pointer browser to  `localhost:5000` to test success  
+1. Download: `protoc-[version]-[OS].zip` from the list of [latest Protobuf releases](https://github.com/google/protobuf/releases/latest).   
+2. go into `[unzipped_dir]/bin`
+3. move protoc binary into $PATH
+4. run `protoc --python_path=[WORKING_DIRECTORY] gtfs-realtime.proto`  
+5. run `protoc --python_path=[WORKING_DIRECTORY] nyct-subway.proto`  
+6. create `API_KEY.py` add the line `key = APIKEY`  
+7. create a `static_transit` directory in root directory and add the static `.txt` files there 
+8. run `python scripts/static_to_json.py`  
+9. run `python app.py` and point browser to  `localhost:5000` to test success  
 
 
 
