@@ -26,7 +26,8 @@ def call():
             break
         if entity.trip_update.trip.HasExtension(nyct.nyct_trip_descriptor) \
                 and (
-                    entity.trip_update.trip.Extensions[nyct.nyct_trip_descriptor]
+                    entity.trip_update.
+                    trip.Extensions[nyct.nyct_trip_descriptor]
                     .is_assigned):
             print(entity)
             print(feed.entity[ii + 1])
