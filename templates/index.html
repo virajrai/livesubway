@@ -1,10 +1,27 @@
 <html>
-	<ul>
-	{% for elem in entities %}
-    	{% if elem %}
-    	   <li><p>{{ elem.__str__() }}</p></li>
-    	{% else %}
-    	   <li><p style="color:red;">Problem with element</p></li>	
-    	{% endif %}
-	{% endfor %}
+
+	<head>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+   	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
+   	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
+
+	<script src='//api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js' charset='utf-8'></script>
+   	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+   	<script type="text/javascript">
+   		//$SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+   	</script>
+	</head>
+	<body>
+	<style>
+		body {bottom:0; padding:0;}
+		#subwaymap { position:absolute; top:0; bottom:0; width:100%; }
+		.mapboxgl-popup-tip .mapboxgl-popup-content {
+			background-color: rgba(0, 0, 0 , 0);
+		}
+	</style>
+
+	<div id="subwaymap"></div>
+	</body>
+	<script src="../static/js/livesubway.js" type="text/javascript"></script>
+
 </html>
