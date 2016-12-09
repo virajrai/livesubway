@@ -1,6 +1,8 @@
 # Live Subway
 
-Live Subway is a project to provide real-time visualization of the NYC subways, using the real-time MTA data feeds, written with [Flask](flask.pocoo.org).
+[![Build Status](https://travis-ci.org/ADI-Labs/livesubway.svg?branch=master)](https://travis-ci.org/ADI-Labs/livesubway)
+
+Live Subway is a project to provide real-time visualization of the NYC subways, using the real-time MTA data feeds, written with [Flask](flask.pocoo.org) and [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js/).
 
 API endpoint: http://datamine.mta.info/files/[key]/gtfs
 
@@ -19,9 +21,3 @@ API endpoint: http://datamine.mta.info/files/[key]/gtfs
 7. create a `static_transit` directory in root directory and add the static `.txt` files there 
 8. run `python scripts/static_to_json.py`  
 9. run `python app.py` and point browser to  `localhost:5000` to test success  
-
-
-
-### Weekly goals
-- 10/14/16: Set up rudimentary Flask app and environment, mess around with MTA API
-- 10/28/16: Sockets and UI stuff
