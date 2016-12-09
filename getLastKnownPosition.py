@@ -1,5 +1,5 @@
-from API_KEY import key
 import urllib2
+from API_KEY import key
 import gtfs_realtime_pb2 as gtfs
 import nyct_subway_pb2 as nyct
 
@@ -24,9 +24,10 @@ def call():
         i += 1
         if done:
             break
-        if entity.trip_update.trip.HasExtension(nyct.nyct_trip_descriptor) and (
-                entity.trip_update.trip.Extensions[nyct.nyct_trip_descriptor]
-                        .is_assigned):
+        if entity.trip_update.trip.HasExtension(nyct.nyct_trip_descriptor) \
+                and (
+                    entity.trip_update.trip.Extensions[nyct.nyct_trip_descriptor]
+                    .is_assigned):
             print(entity)
             print(feed.entity[ii + 1])
             entity2 = feed.entity[ii + 1]

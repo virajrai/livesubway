@@ -57,4 +57,4 @@ class train_schedule_node(object):
 
     def fraction_remaining(self, timestamp):
         return float(timestamp - self.last_known_time) / \
-               float(self.time_between_stops())
+            float(self.time_between_stops())
