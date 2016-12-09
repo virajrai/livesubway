@@ -30,10 +30,10 @@ class train_schedule_node(object):
     def update(self, stop_number, current_status, scheduled_stops):
         self.stop_number = stop_number
         self.scheduled_stops = scheduled_stops
-        if (current_status <= 1):
+        if current_status <= 1:
             self.last_known_stop = scheduled_stops[0][0]
             self.last_known_time = scheduled_stops[0][1]
-            if (len(scheduled_stops) > 1):
+            if len(scheduled_stops) > 1:
                 self.target_stop = scheduled_stops[1][0]
                 self.target_stop_time = scheduled_stops[1][1]
         else:
